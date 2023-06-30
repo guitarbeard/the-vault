@@ -1,0 +1,32 @@
+<%= form_with(model: fragrance) do |form| %>
+  <% if fragrance.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fragrance.errors.count, "error") %> prohibited this fragrance from being saved:</h2>
+
+      <ul>
+        <% fragrance.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :x, style: "display: block" %>
+    <%= form.number_field :x %>
+  </div>
+
+  <div>
+    <%= form.label :y, style: "display: block" %>
+    <%= form.number_field :y %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

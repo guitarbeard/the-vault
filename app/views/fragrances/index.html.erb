@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Fragrances</h1>
+
+<div id="fragrances">
+  <% @fragrances.each do |fragrance| %>
+    <%= render fragrance %>
+    <p>
+      <%= link_to "Show this fragrance", fragrance %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New fragrance", new_fragrance_path %>
