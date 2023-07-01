@@ -3,7 +3,7 @@ class FragrancesController < ApplicationController
 
   # GET /fragrances or /fragrances.json
   def index
-    @fragrances = Fragrance.all
+    render json: Fragrance.all
   end
 
   # GET /fragrances/1 or /fragrances/1.json
