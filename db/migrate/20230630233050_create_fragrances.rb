@@ -4,6 +4,7 @@ class CreateFragrances < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :x
       t.integer :y
+      t.index [:x, :y], unique: true
 
       t.timestamps
     end
